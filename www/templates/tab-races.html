@@ -1,0 +1,62 @@
+<ion-view view-title="Races" class="content">
+
+
+  <ion-content class="center ">
+  <div class="row image1">
+  
+<div class="row">
+    <div class="col col-50"> <div class="logoImg">
+  <img width="40" height="40" src="img/logo-f1.png">
+</div></div>
+
+  <div class="col col-50"><br>
+<br><br><br><br>
+<br><br><br><br>
+<br>
+   <div class="item-input-inset ">
+  <label class="item-input-wrapper">
+    <i class="icon ion-ios-search placeholder-icon "></i>
+    <input class="width-size" type="search" placeholder="Search" ng-model="searchRace">
+  </label>
+</div></div>
+ 
+</div>
+
+</div>
+<div class="row">
+<div class="col heading2">
+    <h4>Races Championship Table</h4>
+</div>
+
+</div>
+<div class="row">
+  <div class="col">
+<table>
+<thead>
+  <tr><th colspan="5"></th></tr>
+</thead>
+<tbody> 
+  <tr>
+          <td>Round</td> <td>Grand Prix</td>  <td>Date</td> 
+        </tr>
+  <tr ng-repeat="race in racesList | filter: searchRace" class="list">
+    <td >{{race.round}}</td>
+    <td><img  src="img/flags/{{race.Circuit.Location.country}}.png" />
+<a href="{{race.Circuit.url}}">
+      {{race.raceName}}</a>
+  </td>
+   
+    <td>{{race.date}}</td>    
+    
+
+
+  </tr>
+</tbody>
+</table>
+</div>
+</div>
+  </ion-content>
+
+
+
+</ion-view>

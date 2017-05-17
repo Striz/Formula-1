@@ -18,8 +18,13 @@ angular.module('starter.services', [])
       });
     }
 
-    return formulaAPI;
-  });
+     formulaAPI.getRaces = function() {
+      return $http({
+        method: 'JSONP', 
+        url: 'http://ergast.com/api/f1/2013.json?callback=JSON_CALLBACK'
+      });
+    }
+
 
 /*
 .controller('f1Controller', ['$scope','$http', function($scope, $http) {
@@ -29,3 +34,8 @@ angular.module('starter.services', [])
     })
  }]);
  */
+
+  
+
+    return formulaAPI;
+  });

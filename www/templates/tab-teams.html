@@ -1,12 +1,18 @@
-<ion-view view-title="Teams">
-  <ion-content class= "padding">
+<ion-view view-title="Teams" class="content">
+
+   <ion-content class="padding center">
+   
+  <img width="80" height="80" src="img/logo-f1.png">
+
+<div class="row">
+<div class="col heading2">
+  <h4>Constructors Championship Standings - 2013</h4>
+</div></div>
+<div class="row">
+  <div class="col">
   <table>
    
-<thead>
-<tr>
-  <th colspan="4"><h4>Constructors Championship Standings - 2013</h4></th>
-</tr>
-</thead>
+
 <tbody>
    <!-- ngRepeat: team in teamsList | filter: filterName -->
    <tr ng-repeat="team in teamsList ">  
@@ -14,7 +20,8 @@
                 <td>{{$index + 1}}</td>
                 <td>
                   <img src="img/flags/{{team.Constructor.nationality}}.png" />
-                 
+                 <a href="{{team.Constructor.url}}">
+
                    {{team.Constructor.name}}
                  </a>
                 </td>
@@ -25,6 +32,6 @@
         
       
       </tbody>
-    </table>
+    </table></div></div>
   </ion-content>
 </ion-view>

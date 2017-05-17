@@ -1,14 +1,36 @@
-<ion-view view-title="Drivers">
-  <ion-content class="padding">
-    <h2>Drivers Championship Table</h2>
-
-<label class="item item-input">
-  <i class="icon ion-search placeholder-icon"></i>
-  <input type="search" placeholder="Search" ng-model="searchFilterDriver">
-</label>
+<ion-view view-title="Drivers" class="content">
 
 
+  <ion-content class="center ">
+  <div class="row image1">
+  
+<div class="row">
+    <div class="col col-50"> <div class="logoImg">
+  <img width="40" height="40" src="img/logo-f1.png">
+</div></div>
 
+  <div class="col col-50"><br>
+<br><br><br><br>
+<br><br><br><br>
+<br>
+   <div class="item-input-inset ">
+  <label class="item-input-wrapper">
+    <i class="icon ion-ios-search placeholder-icon "></i>
+    <input class="width-size" type="search" placeholder="Search" ng-model="searchFilterDriver">
+  </label>
+</div></div>
+ 
+</div>
+
+</div>
+<div class="row">
+<div class="col heading2">
+    <h4 >Drivers Championship Table</h4>
+</div>
+
+</div>
+<div class="row">
+  <div class="col">
 <table>
 <thead>
   <tr><th colspan="5"></th></tr>
@@ -18,9 +40,9 @@
     <td >{{$index + 1}}</td>
     <td>
      <img src="img/flags/{{driver.Driver.nationality}}.png" /> 
-
+<a href="{{driver.Driver.url}}">
       {{driver.Driver.givenName}}&nbsp;{{driver.Driver.familyName}}
-   
+    </a>
   </td>
     <td>{{driver.Constructors[0].name}}</td>
     <td>{{driver.points}}</td>    
@@ -30,6 +52,8 @@
   </tr>
 </tbody>
 </table>
+</div>
+</div>
   </ion-content>
 
 

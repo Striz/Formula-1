@@ -67,6 +67,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         controller: 'driversController'
       }
     } 
+
+ })
+  .state('tab.races', {
+    url: '/races',
+    views: {
+      'tab-races': {
+        templateUrl: 'templates/tab-races.html',
+        controller: 'racesController'
+      }
+    } 
   });
  
 

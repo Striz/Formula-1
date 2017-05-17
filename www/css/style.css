@@ -1,3 +1,35 @@
+.content{
+      background-color: #ede9ea;
+      font-family: Helvetica, Arial sans-serif;
+      font-size: 12px
+}
+
+/**** logoImg ***/
+.center{
+    text-align: center;
+
+}
+.navBar{
+    background-color: #016d6a;
+    color:#ede9ea;
+}
+/**  background image home ***/
+.image1{
+    background: url(../img/Australia5.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width:100%;
+  margin: auto;
+}
+.heading2{
+    padding: 10px;
+
+}
+.width-size{
+  width:100%;
+}
 table{
    width:100%;
     background-color: transparent;
